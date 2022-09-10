@@ -4,8 +4,8 @@ export default defineConfig({
   shopify: {
     defaultCountryCode: 'US',
     defaultLanguageCode: 'EN',
-    storeDomain: 'hydrogen-preview.myshopify.com',
-    storefrontToken: '3b580e70970c4528da70c98e097c2fa0',
+    storeDomain: 'maniere-skin-rituals.myshopify.com',
+    storefrontToken: '6d287a9c2881c219a1d27186d076750d',
     storefrontApiVersion: '2022-07',
   },
   session: CookieSessionStorage('__session', {
