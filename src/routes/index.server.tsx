@@ -17,6 +17,7 @@ import {
   CollectionConnection,
   ProductConnection,
 } from '@shopify/hydrogen/storefront-api-types';
+import {useSanityQuery} from '~/hooks/useSanityQuery';
 
 export default function Homepage() {
   useServerAnalytics({
@@ -56,12 +57,31 @@ function HomepageContent() {
     preload: true,
   });
 
+  // const {result = []} = useSanityQuery({
+  //   hydrogenQueryOptions: {preload: true},
+  //   query: `*[_type == 'home'][0]{hero{title}}`,
+  // });
+
   const {heroBanners, featuredCollections, featuredProducts} = data;
 
   // fill in the hero banners with placeholders if they're missing
   const [primaryHero, secondaryHero, tertiaryHero] = getHeroPlaceholder(
     heroBanners.nodes,
   );
+
+  // const DummyData = () => {
+  //   const {data = []} = useSanityQuery({
+  //     hydrogenQueryOptions: {preload: true},
+  //     query: `*[_type == "home"][0]{hero{title}}`,
+  //   });
+
+  //   return (
+  //     <>
+  //       {/* TODO: gówno nie działą */}
+  //       <p>{data.hero.title}</p>
+  //     </>
+  //   );
+  // };
 
   return (
     <>
@@ -79,6 +99,7 @@ function HomepageContent() {
         title="Collections"
       />
       {tertiaryHero && <Hero {...tertiaryHero} />}
+      {/* <DummyData /> */}
     </>
   );
 }
