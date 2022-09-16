@@ -10,7 +10,7 @@
 :root {
   --color-primary: 20 20 20; /* Text, buttons, etc. */
   --color-contrast: 250 250 249; /* Backgrounds, borders, etc. */
-  --color-accent: 191 72 0; /* Labels like "On sale" */
+  --color-supplementary: 191 72 0; /* Labels like "On sale" */
   --font-size-fine: 0.75rem; /* text-xs */
   --font-size-copy: 1rem; /* text-base */
   --font-size-lead: 1.125rem; /* text-lg */
@@ -36,11 +36,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: hsl(0, 0%, 0%);
-    --color-contrast: hsl(0, 0%, 100%);
-    --color-accent-light: hsl(37, 48%, 85%) ;
-    --color-accent: hsl(38, 47%, 69%);
-    --color-accent-dark: hsl(33, 38%, 60%);
+    --color-primary: hsl(0, 0%, 100%);
+    --color-contrast: hsl(0, 0%, 0%);
+    --color-supplementary-light: hsl(37, 48%, 85%) ;
+    --color-supplementary: hsl(38, 47%, 69%);
+    --color-supplementary-dark: hsl(33, 38%, 60%);
     --color-grey-light: 	hsl(0, 0%, 90%);
     --color-grey: hsl(0, 0%, 80%);
     --color-grey-dark: hsl(0, 0%, 70%);
@@ -68,7 +68,7 @@ shop-pay-button {
   }
 
   body {
-    @apply antialiased text-primary/90 bg-contrast border-primary/10;
+    @apply antialiased text-contrast bg-primary border-contrast;
   }
 
   html {

@@ -19,12 +19,14 @@ export function Button({
   const Component = props?.to ? Link : as;
 
   const baseButtonClasses =
-    'inline-block rounded font-medium text-center py-3 px-6';
+    'inline-block text-fine rounded font-medium text-center py-1 px-6 uppercase';
+
+  const hoverButtonClasses = 'hover:bg-supplementary';
 
   const variants = {
-    primary: `${baseButtonClasses} bg-primary text-contrast`,
-    secondary: `${baseButtonClasses} border border-primary/10 bg-contrast text-primary`,
-    inline: 'border-b border-primary/10 leading-none pb-1',
+    primary: `${baseButtonClasses} bg-primary text-contrast border border-contrast ${hoverButtonClasses}`,
+    secondary: `${baseButtonClasses} border border-primary bg-contrast text-primary`,
+    inline: 'border-b border-primary leading-none pb-1',
   };
 
   const widths = {

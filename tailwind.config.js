@@ -1,23 +1,23 @@
 /* We  */
 /* Tailwind Configuration Docs: https://tailwindcss.com/docs/configuration */
 
-function withOpacityValue(variable) {
-  return ({opacityValue}) => {
-    if (opacityValue === undefined) {
-      return `rgb(var(${variable}))`;
-    }
-    return `rgb(var(${variable}) / ${opacityValue})`;
-  };
-}
+// function withOpacityValue(variable) {
+//   return ({opacityValue}) => {
+//     if (opacityValue === undefined) {
+//       return `rgb(var(${variable}))`;
+//     }
+//     return `rgb(var(${variable}) / ${opacityValue})`;
+//   };
+// }
 
 module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: withOpacityValue('--color-primary'),
-        contrast: withOpacityValue('--color-contrast'),
-        notice: withOpacityValue('--color-accent'),
+        primary: 'var(--color-primary)',
+        contrast: 'var(--color-contrast)',
+        supplementary: 'var(--color-supplementary)',
         shopPay: 'var(--color-shop-pay)',
       },
       screens: {
