@@ -7,7 +7,12 @@ const HomePageData = () => {
     query: `*[_type == 'home'][0]`,
   });
 
-  return <AllecHero data={data} />;
+  return (
+    <>
+      <AllecHero data={data} />
+      <p>{data.modules[0].body}</p>
+    </>
+  );
 };
 
 export default HomePageData;

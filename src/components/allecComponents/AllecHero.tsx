@@ -1,7 +1,6 @@
 import {Image} from '@shopify/hydrogen';
 
 const SanityHero = ({data}: any) => {
-  const title = data.hero.title;
   // TODO: uncomment when works
   // const imageSrc = data.hero.content[0].image.asset._ref;
   return (
@@ -13,7 +12,6 @@ const SanityHero = ({data}: any) => {
         alt={``}
         className="w-full h-full object-cover"
       />
-      <p>{title}</p>;
     </section>
   );
 };
