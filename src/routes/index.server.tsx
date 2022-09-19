@@ -67,7 +67,7 @@ function HomepageContent() {
 
   return (
     <>
-      {/* <HomePageData /> */}
+      <HomePageData />
       <Button>Test button</Button>
       {/* {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />

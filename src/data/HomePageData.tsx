@@ -1,4 +1,4 @@
-import SanityHero from '~/components/sanity/SanityHero';
+import AllecHero from '~/components/allecComponents/AllecHero';
 import {useSanityQuery} from '~/hooks/useSanityQuery';
 
 const HomePageData = () => {
@@ -7,7 +7,7 @@ const HomePageData = () => {
     query: `*[_type == 'home'][0]`,
   });
 
-  return <SanityHero data={data} />
+  return <AllecHero data={data} />;
 };
 
 export default HomePageData;
