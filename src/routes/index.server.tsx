@@ -11,7 +11,7 @@ import {
 
 import {MEDIA_FRAGMENT, PRODUCT_CARD_FRAGMENT} from '~/lib/fragments';
 import {getHeroPlaceholder} from '~/lib/placeholders';
-import {Button, FeaturedCollections, Hero} from '~/components';
+import {FeaturedCollections, Hero} from '~/components';
 import {Layout, ProductSwimlane} from '~/components/index.server';
 import {
   CollectionConnection,
@@ -19,7 +19,6 @@ import {
 } from '@shopify/hydrogen/storefront-api-types';
 
 import HomePageData from '~/data/HomePageData';
-import Canon from '~/components/typography/Canon';
 
 export default function Homepage() {
   useServerAnalytics({
@@ -62,18 +61,11 @@ function HomepageContent() {
   const {heroBanners, featuredCollections, featuredProducts} = data;
 
   // fill in the hero banners with placeholders if they're missing
-  const [primaryHero, secondaryHero, tertiaryHero] = getHeroPlaceholder(
-    heroBanners.nodes,
-  );
+  const [secondaryHero, tertiaryHero] = getHeroPlaceholder(heroBanners.nodes);
 
   return (
     <>
       <HomePageData />
-      <Button>Test button</Button>
-      <Canon>Body Copy</Canon>
-      {/* {primaryHero && (
-        <Hero {...primaryHero} height="full" top loading="eager" />
-      )} */}
       <ProductSwimlane
         data={featuredProducts.nodes}
         title="Featured Products"

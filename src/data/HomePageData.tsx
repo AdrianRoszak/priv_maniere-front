@@ -1,4 +1,5 @@
 import AllecHero from '~/components/allecComponents/AllecHero';
+import Canon from '~/components/typography/Canon';
 import {useSanityQuery} from '~/hooks/useSanityQuery';
 
 const HomePageData = () => {
@@ -10,7 +11,7 @@ const HomePageData = () => {
   return (
     <>
       <AllecHero data={data} />
-      <p>{data.modules[0].body}</p>
+      <Canon>{data.modules[0].body}</Canon>
     </>
   );
 };
