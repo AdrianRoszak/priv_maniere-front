@@ -1,0 +1,112 @@
+:root {
+  --ts--fs-base: 20px;
+  --ts--lh: 1.2;
+  --ts--ratio: 1.15;
+
+  --ts--baseline: calc(var(--ts--fs-base) * var(--ts--lh));
+  --ts--space: var(--ts--baseline);
+
+  /* Hack to integerize the line height... */
+  --integerizer: 4.9406564584124654e-324;
+
+  --ts--fs-up-1: calc(var(--ts--fs-base) * var(--ts--ratio));
+  --ts--lh-up-1: 1.25;
+  --ts--fs-up-2: calc(var(--ts--fs-up-1) * var(--ts--ratio));
+  --ts--lh-up-2: 1.225;
+  --ts--fs-up-3: calc(var(--ts--fs-up-2) * var(--ts--ratio));
+  --ts--lh-up-3: 1.2;
+  --ts--fs-up-4: calc(var(--ts--fs-up-3) * var(--ts--ratio));
+  --ts--lh-up-4: 1.15;
+  --ts--fs-up-5: calc(var(--ts--fs-up-4) * var(--ts--ratio));
+  --ts--lh-up-5: 1.1;
+  --ts--fs-up-6: calc(var(--ts--fs-up-5) * var(--ts--ratio));
+  --ts--lh-up-6: 1.075;
+  --ts--fs-up-7: calc(var(--ts--fs-up-6) * var(--ts--ratio));
+  --ts--lh-up-7: 1.075;
+  --ts--fs-up-8: calc(var(--ts--fs-up-7) * var(--ts--ratio));
+  --ts--lh-up-8: 1.075;
+  --ts--fs-up-9: calc(var(--ts--fs-up-8) * var(--ts--ratio));
+  --ts--lh-up-9: 1.075;
+  --ts--fs-up-10: calc(var(--ts--fs-up-9) * var(--ts--ratio));
+  --ts--lh-up-10: 1.075;
+
+  --ts--fs-down-1: calc(var(--ts--fs-base) / var(--ts--ratio));
+  --ts--fs-down-2: calc(var(--ts--fs-down-1) * 0.9);
+  --ts--fs-down-3: calc(var(--ts--fs-down-2) / var(--ts--ratio));
+  --ts--fs-down-4: calc(var(--ts--fs-down-3) / var(--ts--ratio));
+  --ts--fs-down-5: calc(var(--ts--fs-down-4) / var(--ts--ratio));
+  --ts--fs-down-6: calc(var(--ts--fs-down-5) / var(--ts--ratio));
+}
+
+@media (min-width: 350px) {
+  :root {
+    --ts--fs-base: 20px;
+    --ts--ratio: 1.15;
+  }
+}
+
+@media (min-width: 640px) {
+  :root {
+    --ts--fs-base: 16px;
+    --ts--lh: 1.2;
+    --ts--ratio: 1.2;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --ts--fs-base: 14px;
+    --ts--lh: 1.3;
+    --ts--ratio: 1.313;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --ts--fs-base: 16px;
+    --ts--lh: 1.4;
+    --ts--ratio: 1.313;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --ts--fs-base: 18px;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --ts--fs-base: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --ts--fs-base: 22px;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --ts--fs-base: 24px;
+  }
+}
+
+@media (min-width: 3200px) {
+  :root {
+    --ts--fs-base: 26px;
+  }
+}
+
+/* helper class for typescale baseline overlay */
+
+.baseliner {
+  background: linear-gradient(
+    to bottom,
+    hsl(44, 50%, 92%),
+    hsl(44, 50%, 92%) 50%,
+    hsl(66, 50%, 97%) 50%,
+    hsl(66, 50%, 97%)
+  );
+  background-size: 100% calc(var(--ts--baseline) * 2);
+}
