@@ -6,12 +6,16 @@ export const Canon = ({
   as: Tag = 'h1',
   color,
   fontWeight = 400,
+  serif = false,
 }: TypographyProps) => {
   return (
     <Tag
-      className={[`text-4xl`, getFontWeight(fontWeight), getColor(color)].join(
-        ' ',
-      )}
+      className={[
+        `text-4xl`,
+        serif && `font-serif`,
+        getFontWeight(fontWeight),
+        getColor(color),
+      ].join(' ')}
     >
       {children}
     </Tag>

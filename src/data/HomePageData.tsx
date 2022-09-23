@@ -1,4 +1,4 @@
-import AllecHero from '~/components/allecComponents/AllecHero';
+import AllecHero from '~/components/allecComponents/organisms/AllecHero';
 import Canon from '~/components/typography/Canon';
 import {useSanityQuery} from '~/hooks/useSanityQuery';
 
