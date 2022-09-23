@@ -136,7 +136,7 @@ module.exports = {
         7: 'calc(var(--ts--baseline) * 7)',
         8: 'calc(var(--ts--baseline) * 8)',
         9: 'calc(var(--ts--baseline) * 9)',
-        10: 'calc(var(--ts--baseline) * 10)'
+        10: 'calc(var(--ts--baseline) * 10)',
       },
       maxWidth: {
         'prose-narrow': '45ch',

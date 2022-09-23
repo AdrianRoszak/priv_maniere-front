@@ -1,15 +1,15 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const BodyCopy = ({
+const Canon = ({
   children,
-  as: Tag = 'p',
+  as: Tag = 'h1',
   color,
   fontWeight = 400,
 }: TypographyProps) => {
   return (
     <Tag
-      className={[`text-base`, getFontWeight(fontWeight), getColor(color)].join(
+      className={[`text-4xl`, getFontWeight(fontWeight), getColor(color)].join(
         ' ',
       )}
     >
@@ -18,4 +18,4 @@ const BodyCopy = ({
   );
 };
 
-export default BodyCopy;
+export default Canon;

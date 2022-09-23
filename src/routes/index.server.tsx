@@ -19,7 +19,7 @@ import {
 } from '@shopify/hydrogen/storefront-api-types';
 
 import HomePageData from '~/data/HomePageData';
-import BodyCopy from '~/components/typography/BodyCopy';
+import Canon from '~/components/typography/Canon';
 
 export default function Homepage() {
   useServerAnalytics({
@@ -70,7 +70,7 @@ function HomepageContent() {
     <>
       <HomePageData />
       <Button>Test button</Button>
-      <BodyCopy />
+      <Canon>Body Copy</Canon>
       {/* {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
       )} */}

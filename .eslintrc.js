@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ['plugin:hydrogen/recommended', 'plugin:hydrogen/typescript'],
+  extends: [
+    'plugin:hydrogen/recommended',
+    'plugin:hydrogen/typescript',
+    'prettier',
+  ],
   rules: {
     'node/no-missing-import': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',

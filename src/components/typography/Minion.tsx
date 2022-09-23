@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const BodyCopy = ({
+const Minion = ({
   children,
   as: Tag = 'p',
   color,
@@ -9,7 +9,7 @@ const BodyCopy = ({
 }: TypographyProps) => {
   return (
     <Tag
-      className={[`text-base`, getFontWeight(fontWeight), getColor(color)].join(
+      className={[`text-2xs`, getFontWeight(fontWeight), getColor(color)].join(
         ' ',
       )}
     >
@@ -18,4 +18,4 @@ const BodyCopy = ({
   );
 };
 
-export default BodyCopy;
+export default Minion;

@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Tokens */
 :root {
   --color-primary: 20 20 20; /* Text, buttons, etc. */
@@ -23,7 +22,6 @@
 
   /*  */
 
-  
   @media (min-width: 32em) {
     --height-nav: 4rem;
   }
@@ -40,11 +38,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: hsl(0, 0%, 100%);
-    --color-contrast: hsl(0, 0%, 0%);
-    --color-supplementary-light: hsl(37, 48%, 85%) ;
+    --color-contrast: hsl(0, 0%, 1%);
+    --color-supplementary-light: hsl(37, 48%, 85%);
     --color-supplementary: hsl(38, 47%, 69%);
     --color-supplementary-dark: hsl(33, 38%, 60%);
-    --color-grey-light: 	hsl(0, 0%, 90%);
+    --color-grey-light: hsl(0, 0%, 90%);
     --color-grey: hsl(0, 0%, 80%);
     --color-grey-dark: hsl(0, 0%, 70%);
   }
