@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const Paragon = ({
+export const Paragon = ({
   children,
   as: Tag = 'h3',
   color,
@@ -17,5 +17,3 @@ const Paragon = ({
     </Tag>
   );
 };
-
-export default Paragon;

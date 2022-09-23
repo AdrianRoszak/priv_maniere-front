@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const Brevier = ({
+export const Brevier = ({
   children,
   as: Tag = 'p',
   color,
@@ -17,5 +17,3 @@ const Brevier = ({
     </Tag>
   );
 };
-
-export default Brevier;

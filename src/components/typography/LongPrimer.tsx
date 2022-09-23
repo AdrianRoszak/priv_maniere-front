@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const LongPrimer = ({
+export const LongPrimer = ({
   children,
   as: Tag = 'p',
   color,
@@ -17,5 +17,3 @@ const LongPrimer = ({
     </Tag>
   );
 };
-
-export default LongPrimer;

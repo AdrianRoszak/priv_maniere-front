@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const Canon = ({
+export const Canon = ({
   children,
   as: Tag = 'h1',
   color,

@@ -21,6 +21,8 @@ function getColor(color: string) {
       return `text-contrast`;
     case 'supplementary':
       return `text-supplementary`;
+    case 'white':
+      return 'text-white';
     default:
       return `text-contrast`;
   }

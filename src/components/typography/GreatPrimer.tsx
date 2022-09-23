@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const GreatPrimer = ({
+export const GreatPrimer = ({
   children,
   as: Tag = 'h5',
   color,
@@ -16,6 +16,4 @@ const GreatPrimer = ({
       {children}
     </Tag>
   );
-};
-
-export default GreatPrimer;
+}

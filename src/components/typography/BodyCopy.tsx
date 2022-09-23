@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const BodyCopy = ({
+export const BodyCopy = ({
   children,
   as: Tag = 'p',
   color,
@@ -17,5 +17,3 @@ const BodyCopy = ({
     </Tag>
   );
 };
-
-export default BodyCopy;

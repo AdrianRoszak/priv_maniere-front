@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const Trafalgar = ({
+export const Trafalgar = ({
   children,
   as: Tag = 'h2',
   color,
@@ -17,5 +17,3 @@ const Trafalgar = ({
     </Tag>
   );
 };
-
-export default Trafalgar;

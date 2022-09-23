@@ -1,7 +1,7 @@
 import {getFontWeight, getColor} from '~/utils/classGenerator.ts';
 import type {TypographyProps} from '~/types/typographyTypes.ts';
 
-const DoublePica = ({
+export const DoublePica = ({
   children,
   as: Tag = 'h4',
   color,
@@ -17,5 +17,3 @@ const DoublePica = ({
     </Tag>
   );
 };
-
-export default DoublePica;
