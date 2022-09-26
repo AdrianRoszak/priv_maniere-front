@@ -6,14 +6,13 @@ export const BodyCopy = ({
   as: Tag = 'p',
   color,
   fontWeight = 400,
+  className,
 }: TypographyProps) => {
-  return (
-    <Tag
-      className={[`text-base`, getFontWeight(fontWeight), getColor(color)].join(
-        ' ',
-      )}
-    >
-      {children}
-    </Tag>
-  );
+  const classes = [
+    `text-base`,
+    getFontWeight(fontWeight),
+    getColor(color),
+  ].join(' ');
+
+  return <Tag className={[classes, className]}>{children}</Tag>;
 };

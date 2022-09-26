@@ -16,6 +16,8 @@ import type {
   ProductVariant,
   ProductVariantConnection,
 } from '@shopify/hydrogen/storefront-api-types';
+import AllecHorizontalDivider from '../allecComponents/atoms/AllecHorizontalDivider';
+import {BodyCopy} from '../typography/index';
 
 export function ProductCard({
   product,
@@ -53,9 +55,13 @@ export function ProductCard({
   const styles = clsx('grid gap-6', className);
 
   return (
-    <Link onClick={onClick} to={`/products/${product.handle}`}>
+    <Link
+      onClick={onClick}
+      to={`/products/${product.handle}`}
+      className="block"
+    >
       <div className={styles}>
-        <div className="card-image aspect-[4/5] bg-primary/5">
+        <div className="card-image aspect-[5/5] bg-primary/5">
           <Text
             as="label"
             size="fine"
@@ -82,13 +88,15 @@ export function ProductCard({
           )}
         </div>
         <div className="grid gap-1">
-          <Text
-            className="w-full overflow-hidden whitespace-nowrap text-ellipsis "
+          <BodyCopy
+            className="w-full uppercase overflow-hidden whitespace-nowrap text-ellipsis "
             as="h3"
           >
             {product.title}
-          </Text>
-          <div className="flex gap-4">
+          </BodyCopy>
+          <AllecHorizontalDivider variant={`dark`} spacing={`small`} />
+          <div className="flex gap-4 justify-between">
+            <BodyCopy>400 g</BodyCopy>
             <Text className="flex gap-4">
               <Money withoutTrailingZeros data={price!} />
               {isDiscounted(price as MoneyV2, compareAtPrice as MoneyV2) && (

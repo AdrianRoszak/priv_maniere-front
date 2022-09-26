@@ -61,17 +61,17 @@ function HomepageContent() {
   const {heroBanners, featuredCollections, featuredProducts} = data;
 
   // fill in the hero banners with placeholders if they're missing
-  const [secondaryHero, tertiaryHero] = getHeroPlaceholder(heroBanners.nodes);
+  const [tertiaryHero] = getHeroPlaceholder(heroBanners.nodes);
 
   return (
     <>
       <HomePageData />
       <ProductSwimlane
         data={featuredProducts.nodes}
-        title="Featured Products"
+        title={undefined}
         divider="bottom"
+        count={8}
       />
-      {secondaryHero && <Hero {...secondaryHero} />}
       <FeaturedCollections
         data={featuredCollections.nodes}
         title="Collections"
